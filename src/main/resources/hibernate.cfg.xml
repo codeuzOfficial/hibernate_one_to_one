@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<hibernate-configuration>
+    <session-factory>
+        <property name="hibernate.dialect">org.hibernate.dialect.PostgreSQL82Dialect</property>
+        <property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
+        <property name="hibernate.connection.username">hibernate_lesson_user</property>
+        <property name="hibernate.connection.password">hibernate_lesson_password</property>
+        <property name="hibernate.connection.url">jdbc:postgresql://localhost:5432/hibernate_db_lesson</property>
+        <!-- Drop and re-create the database schema on startup -->
+        <property name="hbm2ddl.auto">update</property>
+        <property name="show_sql">true</property>
+
+        <!-- MAPPINGS -->
+        <mapping class="dasturlash.uz.EmployeeEntity"/>
+        <mapping class="dasturlash.uz.AddressEntity"/>
+    </session-factory>
+
+</hibernate-configuration>
